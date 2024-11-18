@@ -1,5 +1,6 @@
 package by.itclass.controllers;
 
+import by.itclass.model.sevices.TvService;
 import by.itclass.model.sevices.UserService;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -12,10 +13,12 @@ import static by.itclass.constants.AppConst.MESSAGE_ATTR;
 
 public abstract class AbstractController extends HttpServlet {
     protected UserService userService;
+    protected TvService tvService;
 
     @Override
     public void init() throws ServletException {
         userService = UserService.getInstance();
+        tvService = TvService.getInstance();
     }
 
     @Override
@@ -30,6 +33,9 @@ public abstract class AbstractController extends HttpServlet {
     protected void forward(HttpServletRequest req, HttpServletResponse resp , String url , String message) throws ServletException, IOException {
         req.setAttribute(MESSAGE_ATTR,message);
         req.getRequestDispatcher(url).forward(req,resp);
+    }
+    protected void redirect(HttpServletResponse resp , String url) throws IOException {
+        resp.sendRedirect(url);
     }
 
 }

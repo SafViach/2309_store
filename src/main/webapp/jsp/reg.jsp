@@ -3,18 +3,20 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>Login Page</title>
+    <title>Registration Page</title>
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
 <jsp:include page="<%=MENU_JSP%>"></jsp:include>
 <img class="default-img" src="<%=BACKGROUND_IMAGE%>">
     <div class="form-box">
-        <h2>Login</h2>
-        <form method="post" action="<%=LOGIN_CONTROLLER%>">
+        <h2>Registration</h2>
+        <form method="post" action="<%=REG_CONTROLLER%>">
+            <input type="text" name="<%=NAME_PARAM%>" placeholder="Fio" required>
+            <input type="text" name="<%=EMAIL_PARAM%>" placeholder="Email" required>
             <input type="text" name="<%=LOGIN_PARAM%>" placeholder="Login" required>
             <input type="password" name="<%=PASS_PARAM%>" placeholder="Password" required>
-            <input type="submit" value="Login">
+            <input type="submit" value="Register">
         </form>
         <c:if test="${not empty message}">
             <h2 class="error">${message}</h2>
