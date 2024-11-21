@@ -8,16 +8,10 @@
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-<jsp:include page="<%=MENU_JSP%>"></jsp:include>
-<c:if test="${not empty tvs}">
-    <c:forEach var="tv" items="${tvs}">
-        <div class="item-box">
-            <img class="small-img" src="/img/tv/${tv.vendor}-${tv.model}.jpg">
-            <p>Vendor ${tv.vendor}</p>
-            <p>Model ${tv.model}</p>
-            <p>Price ${tv.price} byn.</p>
-        </div>
-    </c:forEach>
-</c:if>
+
+    <jsp:include page="<%=MENU_JSP%>"></jsp:include>
+    <jsp:include page="/jsp/slider/slider.html"></jsp:include>
+    <script src="/js/script.js"></script>
+
 </body>
 </html>

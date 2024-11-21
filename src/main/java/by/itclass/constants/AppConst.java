@@ -10,6 +10,13 @@ public class AppConst {
     public static final String MODEL_PARAM = "model";
     public static final String SCREEN_PARAM = "screenSize";
     public static final String PRICE_PARAM = "price";
+    public static final String PRICE_FROM_PARAM = "priceFrom";
+    public static final String PRICE_TO_PARAM = "priceTo";
+    public static final String MEMORY_PARAM = "memorySize";
+    public static final String CPU_PARAM = "cpu";
+    public static final String LAPTOPS_PARAM = "laptops";
+
+
 
     public static final String MESSAGE_ATTR = "message";
     public static final String USER_ATTR = "user";
@@ -20,6 +27,7 @@ public class AppConst {
     public static final String REG_CONTROLLER = "/reg";
     public static final String CHANGE_CONTROLLER = "/change";
     public static final String TV_CONTROLLER = "/tv";
+    public static final String LAPTOP_CONTROLLER = "/laptop";
 
     public static final String LOGIN_JSP = "/jsp/login.jsp";
     public static final String REG_JSP = "/jsp/reg.jsp";
@@ -27,6 +35,10 @@ public class AppConst {
     public static final String INDEX_JSP = "/index.jsp";
     public static final String SET_PASS_JSP = "/jsp/set_pass.jsp";
     public static final String MENU_JSP = "/jsp/menu.jsp";
+    public static final String TV_PAGE_JSP = "/jsp/filters/tv-page.jsp";
+    public static final String TV_FILTER = "/jsp/filters/tv-filter.html";
+    public static final String LAPTOP_PAGE_JSP = "/jsp/filters/laptop-page.jsp";
+    public static final String LAPTOP_FILTER = "/jsp/filters/laptop-filter.html";
 
     public static final String BACKGROUND_IMAGE = "/img/background-img.jpg";
 
