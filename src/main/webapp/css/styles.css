@@ -147,3 +147,23 @@ body{
     font-family: auto;
 
 }
+.item-box input[type="submit"]{
+    width: 200px;
+    background-color: forestgreen;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    margin: 0 25px;
+    cursor: pointer;
+}
+.cart-item{
+    height: 90px;
+}
+.cart-img{
+    height: 70px;
+    float: left;
+    margin: 5px 50px 10px 0;
+}
+.cart-text{
+    margin-left:10px;
+}

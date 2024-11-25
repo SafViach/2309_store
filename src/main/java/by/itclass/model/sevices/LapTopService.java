@@ -40,7 +40,7 @@ public class LapTopService {
                 .filter(laptop -> cpu == null || ArrayUtils.contains(cpu , laptop.getVendor()))
                 .filter(laptop -> cpus == null || ArrayUtils.contains(cpus , laptop.getCpu()))
                 .filter(laptop -> memory == null || ArrayUtils.contains(memory , String.valueOf(laptop.getMemorySize())))
-                .filter(laptop -> from.isEmpty() || laptop.getPrice() < Double.parseDouble(from))
+                .filter(laptop -> from.isEmpty() || laptop.getPrice() > Double.parseDouble(from))
                 .filter(laptop -> to.isEmpty() || laptop.getPrice() < Double.parseDouble(to))
                 .toList();
     }

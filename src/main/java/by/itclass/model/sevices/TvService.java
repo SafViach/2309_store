@@ -35,7 +35,7 @@ public class TvService {
         return allTvs.stream()
                 .filter(tv -> vendors == null || ArrayUtils.contains(vendors , tv.getVendor()))
                 .filter(tv -> screens == null || ArrayUtils.contains(screens , String.valueOf(tv.getScreenSize())))
-                .filter(tv -> from.isEmpty() || tv.getPrice() < Double.parseDouble(from))
+                .filter(tv -> from.isEmpty() || tv.getPrice() > Double.parseDouble(from))
                 .filter(tv -> to.isEmpty() || tv.getPrice() < Double.parseDouble(to))
                 .toList();
     }
