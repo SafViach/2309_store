@@ -167,3 +167,102 @@ body{
 .cart-text{
     margin-left:10px;
 }
+.center-find-div{
+    position:relative;
+
+}
+.center-find-div input[type=text]{
+    border-radius:50px;
+    border:1px solid #d3d3d3;
+    width: 1200px;
+    padding-left: 20px;
+    margin-left: 100px;
+}
+.center-find-div input[type=submit]{
+    padding:0px;
+    height:25px;
+    border-radius:20px;
+    width:60px;
+}
+.cart-item input[type="submit"]{
+    width: 140px;
+    background-color: forestgreen;
+    color: white;
+    padding: 10px;
+    margin: 0;
+    cursor: pointer;
+}
+.cart-item input[type="submit"].change-number{
+    background-color: forestgreen;
+    color: white;
+    border-radius: 2em;
+    padding: .5em .8em;
+    width: 28px;
+    cursor: pointer;
+}
+.cart-item form{
+    display: inline-block;
+}
+
+.cart-item input[type=number]{
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+.cart-item input[type=number]::-webkit-inner-spin-button,
+.cart-item input[type=number]::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+}
+.number-input{
+    display: inline-flex;
+}
+.number-input button {
+    background-color: white;
+    border: 1px solid black;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.number-input button:before,
+.number-input button:after{
+    display: inline-block;
+    position: absolute;
+    content: '';
+    width: 1rem;
+    height: 2px;
+    background-color: black;
+    transform: translate(-50% , 50%);
+}
+.number-input button.plus:after{
+    transform: translate(-50% , 50%) rotate(90deg);
+}
+.number-input input[type=number]{
+    max-width: 3rem;
+    padding: 0.5rem;
+    border: none;
+    font-size: 1.5rem;
+    height: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+.order-container{
+    width: 600px;
+    text-align: center;
+}
+.order-container input{
+    width: 600px;
+    padding: 5px 0;
+    margin: 15px 0;
+}
+.order-container input[type=submit]{
+    width: 150px;
+    background-color: forestgreen;
+    color: white;
+    padding: 16px 32px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.order-list-container{
+    background-color: lightgrey;
+}

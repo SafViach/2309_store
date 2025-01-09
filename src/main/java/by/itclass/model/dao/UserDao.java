@@ -15,10 +15,12 @@ public class UserDao {
     private static final String INSERT_USER = "INSERT INTO user(name , email , login , password) values (?, ?, ?, ?)";
     private static final String CHECK_USER = "SELECT id FROM user WHERE login = ?";
     private static final String CHANGE_PASS = "UPDATE user SET password = ? WHERE id = ?";
+
     private static UserDao dao;
     private UserDao() {
         ConnectionManager.init();
     }
+
     public static UserDao getInstance() {
         if (dao == null) {
             dao = new UserDao();

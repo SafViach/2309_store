@@ -17,7 +17,6 @@ public class CartController extends AbstractController {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         var cartAction = req.getParameter(CART_ACTION_PARAM);
-
         var itemType = Integer.parseInt(req.getParameter(ITEM_TYPE_PARAM));
         var itemId = Integer.parseInt(req.getParameter(ITEM_ID_PARAM));
         var itemVendor = req.getParameter(ITEM_VENDOR_PARAM);
@@ -26,11 +25,12 @@ public class CartController extends AbstractController {
         var itemQuantity = Integer.parseInt(req.getParameter(QUANTITY_PARAM));
         var item = new OrderItem(itemType,itemId,itemVendor,itemModel,itemPrice,itemQuantity);
 
-
         var session = req.getSession();
 
-        var items = cartService.processCart(session,cartAction,item);
+        var items = cartService.processCart(session,cartAction,item );
+
         session.setAttribute(ORDER_ITEMS_ATTR , items);
+
         if ("add".equals(cartAction)){
             redirectToProductPage(resp , itemType);
         }else {

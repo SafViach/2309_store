@@ -9,8 +9,13 @@
 </head>
 <body>
 
-    <jsp:include page="<%=MENU_JSP%>"></jsp:include>
-    <jsp:include page="/jsp/slider/slider.html"></jsp:include>
+    <jsp:include page="<%=MENU_JSP%>"/>
+    <jsp:include page="<%=FIND_JSP%>"/>
+    <h2>Hello ${user.name}</h2>
+    <c:if test="${not empty message}">
+        <h2>${message}</h2>
+    </c:if>
+    <jsp:include page="/jsp/slider/slider.html"/>
     <script src="/js/script.js"></script>
 
 </body>
